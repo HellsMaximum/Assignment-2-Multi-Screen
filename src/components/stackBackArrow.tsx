@@ -1,7 +1,7 @@
 /**
  * Back arrow component for stack navigation pages.
  * if executed, it navigates back to the previous page in the stack.
- * 
+ *
  * Usage: <StackBackArrow />
  */
 
@@ -14,13 +14,13 @@ export default function StackBackArrow() {
   const router = useRouter();
 
   return (
-        <Pressable
-          accessibilityLabel="Go back"
-          accessibilityRole="button"
-          onPress={() => router.back()}
-          style={styles.profileImagesBackButton}
-        >
-          <Ionicons name="arrow-back" size={24} />
-        </Pressable>
+    <Pressable
+      accessibilityLabel="Go back"
+      accessibilityRole="button"
+      onPress={() => router.back()}
+      style={styles.stackBackButton}
+    >
+      <Ionicons name="arrow-back" size={24} />
+    </Pressable>
   );
 }

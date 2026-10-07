@@ -36,7 +36,7 @@ export default function Index() {
             style={styles.imgGridItem}
             onPress={() =>
               router.push({
-                pathname: "/pages/profileImages",
+                pathname: "/pages/profilePosts",
                 params: { id: image.id },
               })
             }

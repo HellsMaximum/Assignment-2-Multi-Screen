@@ -113,16 +113,22 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
-  profileImagesContainer: {
+  profilePostsContainer: {
     flex: 1,
     backgroundColor: "white",
   },
-  profileImagesBackButton: {
+  stackBackButton: {
     width: 44,
     height: 44,
     justifyContent: "center",
   },
-  profileImagesPhoto: {
+  profilePostHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    paddingHorizontal: 12,
+  },
+  profilePostPhoto: {
     width: SCREEN_WIDTH,
     maxHeight: SCREEN_HEIGHT / 2,
     aspectRatio: 1,
