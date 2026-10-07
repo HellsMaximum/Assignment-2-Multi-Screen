@@ -26,10 +26,19 @@ export default function ProfilePosts() {
         {gridImages.map((image) => (
           <View key={image.id}>
             <View style={styles.profilePostHeader}>
-              <ProfileImage />
-              <Text style={themeStyles.primaryText}>dickens_doug</Text>
+              {/* Left side of the post header */}
+              <View>
+                <ProfileImage />
+                <Text style={themeStyles.primaryText}>dickens_doug</Text>
+              </View>
+
+            {/* Right side of the post header */}
+            <View>
+              {/* some lines on top of eachother icon here */}
+            </View>
             </View>
             <Image source={image.source} style={styles.profilePostPhoto} />
+            <Text style={[styles.profilePostBottom, themeStyles.primaryText]}>{image.bottomText}</Text>
           </View>
         ))}
       </ScrollView>

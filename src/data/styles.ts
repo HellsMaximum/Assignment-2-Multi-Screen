@@ -165,6 +165,9 @@ export const styles = StyleSheet.create({
     aspectRatio: 1,
     resizeMode: "cover",
   },
+  profilePostBottom: {
+    padding: 12,
+  },
   profileNavSelected: {
     height: "100%",
     paddingHorizontal: 20,
