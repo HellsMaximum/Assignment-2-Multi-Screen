@@ -112,6 +112,14 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
+  profileImagesContainer: {
+    flex: 1,
+    backgroundColor: "white",
+  },
+  profileImagesPhoto: {
+    width: "100%",
+    aspectRatio: 1,
+  },
   // Add a black border to the bottom to show that it is what the user has selected
   profileNavSelected: {
     height: "100%",
