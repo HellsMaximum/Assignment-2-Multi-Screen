@@ -156,8 +156,19 @@ export const styles = StyleSheet.create({
   profilePostHeader: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 10,
+    justifyContent: "space-between",
     paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
+  profilePostLeftSide: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  profilePostAvatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
   },
   profilePostPhoto: {
     width: SCREEN_WIDTH,

@@ -4,14 +4,18 @@
  * Usage: <ProfileImage />
  */
 
-import { Image } from "react-native";
+import { Image, ImageStyle, StyleProp } from "react-native";
 import { styles } from "../data/styles";
 
-export default function ProfileImage() {
+type ProfileImageProps = {
+  style?: StyleProp<ImageStyle>;
+};
+
+export default function ProfileImage({ style }: ProfileImageProps) {
   return (
     <Image
       source={require("../../assets/images/img4.jpg")}
-      style={styles.profileImage}
+      style={[styles.profileImage, style]}
     />
   );
 }

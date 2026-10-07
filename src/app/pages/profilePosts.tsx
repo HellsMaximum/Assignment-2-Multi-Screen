@@ -9,7 +9,8 @@
 
 import ProfileImage from "@/components/profileImage";
 import StackBackArrow from "@/components/stackBackArrow";
-import { Image, ScrollView, View, Text, useColorScheme } from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { Image, ScrollView, Text, useColorScheme, View } from "react-native";
 import { gridImages } from "../../data/gridImages";
 import { getThemeStyles, styles } from "../../data/styles";
 
@@ -22,23 +23,29 @@ export default function ProfilePosts() {
         <StackBackArrow />
       </View>
 
-      <ScrollView style={[styles.profilePostsContainer, themeStyles.background]}>
+      <ScrollView
+        style={[styles.profilePostsContainer, themeStyles.background]}
+      >
         {gridImages.map((image) => (
           <View key={image.id}>
             <View style={styles.profilePostHeader}>
               {/* Left side of the post header */}
-              <View>
-                <ProfileImage />
+              <View style={styles.profilePostLeftSide}>
+                <ProfileImage style={styles.profilePostAvatar} />
                 <Text style={themeStyles.primaryText}>dickens_doug</Text>
               </View>
 
-            {/* Right side of the post header */}
-            <View>
-              {/* some lines on top of eachother icon here */}
-            </View>
+              {/* Right side of the post header */}
+              <Ionicons
+                name="reorder-three-outline"
+                size={30}
+                color={themeStyles.icon.color}
+              />
             </View>
             <Image source={image.source} style={styles.profilePostPhoto} />
-            <Text style={[styles.profilePostBottom, themeStyles.primaryText]}>{image.bottomText}</Text>
+            <Text style={[styles.profilePostBottom, themeStyles.primaryText]}>
+              {image.bottomText}
+            </Text>
           </View>
         ))}
       </ScrollView>
