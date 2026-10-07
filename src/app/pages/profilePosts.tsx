@@ -54,9 +54,30 @@ export default function ProfilePosts() {
               />
             </View>
             <Image source={image.source} style={styles.profilePostPhoto} />
-            <Text style={[styles.profilePostBottom, themeStyles.primaryText]}>
-              {image.bottomText}
-            </Text>
+
+            {/* View containing 5 icons the first 4 are beside eachother on the left and the last one is by itself on the right */}
+            <View style={styles.profilePostActions}>
+              <View style={styles.profilePostActionGroup}>
+                <Ionicons name="heart-outline" size={30} color={themeStyles.icon.color} />
+                <Ionicons name="chatbubble-outline" size={30} color={themeStyles.icon.color} />
+                <Ionicons name="repeat-outline" size={30} color={themeStyles.icon.color} />
+                <Ionicons name="share-outline" size={30} color={themeStyles.icon.color} />
+              </View>
+
+              <View>
+                <Ionicons name="bookmark-outline" size={30} color={themeStyles.icon.color} />
+              </View>
+            </View>
+
+            <View style={styles.profilePostBottom}>
+              <Text style={themeStyles.primaryText}>
+                <Text style={styles.accountNameText}>dickens_doug </Text>
+                {image.bottomText}
+              </Text>
+              <Text style={[themeStyles.secondaryText, styles.profilePostDate]}>
+                {image.dates}
+              </Text>
+            </View>
           </View>
         ))}
       </ScrollView>

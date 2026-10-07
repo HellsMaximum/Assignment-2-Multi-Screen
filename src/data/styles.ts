@@ -179,8 +179,24 @@ export const styles = StyleSheet.create({
     aspectRatio: 1,
     resizeMode: "cover",
   },
+  profilePostActions: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
+  profilePostActionGroup: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 20,
+  },
   profilePostBottom: {
     padding: 12,
+  },
+  profilePostDate: {
+    fontSize: 12,
+    marginTop: 4,
   },
   profileNavSelected: {
     height: "100%",
@@ -194,5 +210,8 @@ export const styles = StyleSheet.create({
     width: 75,
     height: 75,
     borderRadius: 50,
+  },
+  accountNameText: {
+    fontWeight: "bold",
   },
 });
