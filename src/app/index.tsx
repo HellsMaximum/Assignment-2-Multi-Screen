@@ -1,5 +1,13 @@
+/**
+ * Index page of the app/profile page
+ * This page displays user profile information and content.
+ * This page includes the profile header component (ProfileTop).
+ * This page also includes a stack navigation for navigating selected pictures within the profile content.
+ */
+
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Image, ScrollView, View } from "react-native";
+import { Image, Pressable, ScrollView, View } from "react-native";
+import { Link } from "expo-router";
 import ProfileTop from "../components/profileTop";
 import { gridImages } from "../data/gridImages";
 import { styles } from "../data/styles";
@@ -21,11 +29,15 @@ export default function Index() {
       {/* View that contains a grid of images for the profile content */}
       <View style={[styles.imgGrid, styles.imgGridRow]}>
         {gridImages.map((image) => (
-          <Image
+          <Link
             key={image.id}
-            source={image.source}
-            style={styles.imgGridItem}
-          />
+            href={{ pathname: "/pages/profileImages", params: { id: image.id } }}
+            asChild
+          >
+            <Pressable style={styles.imgGridItem}>
+              <Image source={image.source} style={styles.imgGridPhoto} />
+            </Pressable>
+          </Link>
         ))}
       </View>
     </ScrollView>
