@@ -1,6 +1,7 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 const NUM_COLUMNS = 3;
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
   rootContainer: {
@@ -122,8 +123,10 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   profileImagesPhoto: {
-    width: "100%",
+    width: SCREEN_WIDTH,
+    maxHeight: SCREEN_HEIGHT / 2,
     aspectRatio: 1,
+    resizeMode: "cover",
   },
   // Add a black border to the bottom to show that it is what the user has selected
   profileNavSelected: {
