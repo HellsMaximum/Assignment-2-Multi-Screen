@@ -116,6 +116,11 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
   },
+  profileImagesBackButton: {
+    width: 44,
+    height: 44,
+    justifyContent: "center",
+  },
   profileImagesPhoto: {
     width: "100%",
     aspectRatio: 1,

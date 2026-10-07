@@ -2,6 +2,8 @@
  * Footer component containing navigation throughout the app
  * This provides quick access to the main sections of the app.
  * Reused on every page because instagram has a consistent bottom navigation bar.
+ * 
+ * Usage: <Footer />
  */
 
 import { View } from "react-native";

@@ -6,6 +6,8 @@
  * or just the top of the profile page.
  * 
  * This could be reused on multiple profile pages if I was makeing instagram fully.
+ * 
+ * Usage: <ProfileTop />
  */
 
 
