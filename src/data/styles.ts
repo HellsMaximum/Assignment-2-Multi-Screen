@@ -3,6 +3,37 @@ import { Dimensions, StyleSheet } from "react-native";
 const NUM_COLUMNS = 3;
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 
+export function getThemeStyles(isDark: boolean) {
+  const colors = isDark
+    ? {
+        background: "black",
+        surface: "black",
+        text: "white",
+        secondaryText: "lightgray",
+        border: "#262626",
+        button: "#363636",
+      }
+    : {
+        background: "white",
+        surface: "white",
+        text: "black",
+        secondaryText: "#262626",
+        border: "lightgray",
+        button: "lightgray",
+      };
+
+  return StyleSheet.create({
+    background: { backgroundColor: colors.background },
+    surface: { backgroundColor: colors.surface },
+    primaryText: { color: colors.text },
+    secondaryText: { color: colors.secondaryText },
+    border: { borderColor: colors.border },
+    button: { backgroundColor: colors.button },
+    icon: { color: colors.text },
+    selectedBorder: { borderBottomColor: colors.text },
+  });
+}
+
 export const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,

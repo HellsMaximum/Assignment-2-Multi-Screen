@@ -11,32 +11,36 @@
  */
 
 
-import { Pressable, View, Text, Alert } from "react-native";
+import { Pressable, View, Text, Alert, useColorScheme } from "react-native";
 import ProfileImage from "./profileImage";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { gridImages } from "../data/gridImages";
-import { styles } from "../data/styles";
+import { getThemeStyles, styles } from "../data/styles";
 
 export default function ProfileTop() {
+  const themeStyles = getThemeStyles(useColorScheme() === "dark");
+
   return (
     <View>
-      <View style={styles.header}>
+      <View style={[styles.header, themeStyles.surface]}>
         {/* left side of the header */}
         <View style={styles.headerSide}>
-          <Ionicons name="add-outline" size={37} />
+          <Ionicons name="add-outline" size={37} color={themeStyles.icon.color} />
         </View>
         {/* center of the header */}
         <View style={styles.headerCenter}>
-          <Text style={styles.headerText}>dickens_doug</Text>
+          <Text style={[styles.headerText, themeStyles.primaryText]}>
+            dickens_doug
+          </Text>
         </View>
         {/* right side of the header */}
         <View style={[styles.headerSide, styles.headerRight]}>
-          <Ionicons name="notifications-outline" size={30} />
-          <Ionicons name="menu-outline" size={30} />
+          <Ionicons name="notifications-outline" size={30} color={themeStyles.icon.color} />
+          <Ionicons name="menu-outline" size={30} color={themeStyles.icon.color} />
         </View>
       </View>
 
-      <View style={styles.profile}>
+      <View style={[styles.profile, themeStyles.surface]}>
         {/* View for the top row containing the profile picture and the profile stats beside it */}
         <View style={styles.profileTopRow}>
           <ProfileImage />
@@ -44,23 +48,29 @@ export default function ProfileTop() {
           <View style={styles.profileStats}>
             <View style={styles.profileStat}>
               {/* dynamically change the post display number based on how many images there are in the image grid */}
-              <Text style={styles.profileStatNumber}>{gridImages.length}</Text>
-              <Text>Posts</Text>
+              <Text style={[styles.profileStatNumber, themeStyles.primaryText]}>
+                {gridImages.length}
+              </Text>
+              <Text style={themeStyles.secondaryText}>Posts</Text>
             </View>
             <View style={styles.profileStat}>
-              <Text style={styles.profileStatNumber}>131</Text>
-              <Text>Followers</Text>
+              <Text style={[styles.profileStatNumber, themeStyles.primaryText]}>
+                131
+              </Text>
+              <Text style={themeStyles.secondaryText}>Followers</Text>
             </View>
             <View style={styles.profileStat}>
-              <Text style={styles.profileStatNumber}>291</Text>
-              <Text>Following</Text>
+              <Text style={[styles.profileStatNumber, themeStyles.primaryText]}>
+                291
+              </Text>
+              <Text style={themeStyles.secondaryText}>Following</Text>
             </View>
           </View>
         </View>
 
         {/* Profile bio section*/}
         <View style={styles.profileBio}>
-          <Text>
+          <Text style={themeStyles.primaryText}>
             The call of the void is the mind's way of appreciating life
           </Text>
         </View>
@@ -71,17 +81,21 @@ export default function ProfileTop() {
             onPress={() => {
               Alert.alert("Alert button pressed");
             }}
-            style={styles.profileButton}
+            style={[styles.profileButton, themeStyles.button]}
           >
-            <Text style={styles.profileButtonText}>Alert!</Text>
+            <Text style={[styles.profileButtonText, themeStyles.primaryText]}>
+              Alert!
+            </Text>
           </Pressable>
           <Pressable
             onPress={() => {
               Alert.alert("Alert button 2 pressed");
             }}
-            style={styles.profileButton}
+            style={[styles.profileButton, themeStyles.button]}
           >
-            <Text style={styles.profileButtonText}>Alert x2!</Text>
+            <Text style={[styles.profileButtonText, themeStyles.primaryText]}>
+              Alert x2!
+            </Text>
           </Pressable>
         </View>
       </View>

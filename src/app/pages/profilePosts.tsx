@@ -9,23 +9,25 @@
 
 import ProfileImage from "@/components/profileImage";
 import StackBackArrow from "@/components/stackBackArrow";
-import { Image, ScrollView, View, Text } from "react-native";
+import { Image, ScrollView, View, Text, useColorScheme } from "react-native";
 import { gridImages } from "../../data/gridImages";
-import { styles } from "../../data/styles";
+import { getThemeStyles, styles } from "../../data/styles";
 
 export default function ProfilePosts() {
+  const themeStyles = getThemeStyles(useColorScheme() === "dark");
+
   return (
-    <View style={styles.rootContainer}>
-      <View style={styles.header}>
+    <View style={[styles.rootContainer, themeStyles.background]}>
+      <View style={[styles.header, themeStyles.surface]}>
         <StackBackArrow />
       </View>
 
-      <ScrollView style={styles.profilePostsContainer}>
+      <ScrollView style={[styles.profilePostsContainer, themeStyles.background]}>
         {gridImages.map((image) => (
           <View key={image.id}>
             <View style={styles.profilePostHeader}>
               <ProfileImage />
-              <Text>dickens_doug</Text>
+              <Text style={themeStyles.primaryText}>dickens_doug</Text>
             </View>
             <Image source={image.source} style={styles.profilePostPhoto} />
           </View>

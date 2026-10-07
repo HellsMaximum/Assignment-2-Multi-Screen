@@ -7,11 +7,12 @@
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRouter } from "expo-router";
-import { Pressable } from "react-native";
-import { styles } from "../data/styles";
+import { Pressable, useColorScheme } from "react-native";
+import { getThemeStyles, styles } from "../data/styles";
 
 export default function StackBackArrow() {
   const router = useRouter();
+  const themeStyles = getThemeStyles(useColorScheme() === "dark");
 
   return (
     <Pressable
@@ -20,7 +21,7 @@ export default function StackBackArrow() {
       onPress={() => router.back()}
       style={styles.stackBackButton}
     >
-      <Ionicons name="arrow-back" size={24} />
+      <Ionicons name="arrow-back" size={24} color={themeStyles.icon.color} />
     </Pressable>
   );
 }
