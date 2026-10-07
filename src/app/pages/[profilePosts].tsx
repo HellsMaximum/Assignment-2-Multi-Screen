@@ -34,9 +34,7 @@ export default function ProfilePosts() {
         <View style={styles.headerSide} />
       </View>
 
-      <ScrollView
-        style={[styles.profilePostsContainer, themeStyles.background]}
-      >
+      <ScrollView style={[styles.profilePostsContainer, themeStyles.background]}>
         {gridImages.map((image) => (
           <View key={image.id}>
             <View style={styles.profilePostHeader}>
