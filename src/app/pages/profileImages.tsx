@@ -7,10 +7,11 @@
  * Each image is the same size as the others and can be scrolled into view.
  */
 
+import ProfileImage from "@/components/profileImage";
+import StackBackArrow from "@/components/stackBackArrow";
 import { Image, ScrollView, View } from "react-native";
 import { gridImages } from "../../data/gridImages";
 import { styles } from "../../data/styles";
-import StackBackArrow from "@/components/stackBackArrow";
 
 export default function ProfileImages() {
   return (
@@ -21,11 +22,12 @@ export default function ProfileImages() {
 
       <ScrollView style={styles.profileImagesContainer}>
         {gridImages.map((image) => (
-          <Image
-            key={image.id}
-            source={image.source}
-            style={styles.profileImagesPhoto}
-          />
+          <View key={image.id}>
+            <View>
+              <ProfileImage />
+            </View>
+            <Image source={image.source} style={styles.profileImagesPhoto} />
+          </View>
         ))}
       </ScrollView>
     </View>

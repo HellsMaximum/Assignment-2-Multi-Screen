@@ -128,7 +128,6 @@ export const styles = StyleSheet.create({
     aspectRatio: 1,
     resizeMode: "cover",
   },
-  // Add a black border to the bottom to show that it is what the user has selected
   profileNavSelected: {
     height: "100%",
     paddingHorizontal: 20,

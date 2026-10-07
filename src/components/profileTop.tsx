@@ -11,7 +11,8 @@
  */
 
 
-import { Pressable, View, Text, Image, Alert } from "react-native";
+import { Pressable, View, Text, Alert } from "react-native";
+import ProfileImage from "./profileImage";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { gridImages } from "../data/gridImages";
 import { styles } from "../data/styles";
@@ -38,10 +39,7 @@ export default function ProfileTop() {
       <View style={styles.profile}>
         {/* View for the top row containing the profile picture and the profile stats beside it */}
         <View style={styles.profileTopRow}>
-          <Image
-            source={require("../../assets/images/img4.jpg")}
-            style={styles.profileImage}
-          />
+          <ProfileImage />
           {/* View containing specific stats about the profile (posts, following, followers) */}
           <View style={styles.profileStats}>
             <View style={styles.profileStat}>
