@@ -1,15 +1,11 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Alert, Image, Pressable, ScrollView, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { gridImages } from "../data/gridImages";
 import { styles } from "../data/styles";
 
 export default function Index() {
   return (
-    // set the safe area so there isn't overlap default system elements
-    <SafeAreaView style={styles.safeArea}>
-      {/* Set the scrollable content area which will contain most of the main content of the screen */}
-      <ScrollView style={styles.scroll}>
+    <ScrollView style={styles.scroll}>
         {/* View that contains the header */}
         <View style={styles.header}>
           {/* left side of the header */}
@@ -102,7 +98,6 @@ export default function Index() {
             />
           ))}
         </View>
-      </ScrollView>
-    </SafeAreaView>
+    </ScrollView>
   );
 }

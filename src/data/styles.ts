@@ -3,6 +3,9 @@ import { StyleSheet } from "react-native";
 const NUM_COLUMNS = 3;
 
 export const styles = StyleSheet.create({
+  rootContainer: {
+    flex: 1,
+  },
   safeArea: {
     flex: 1,
     backgroundColor: "white",
