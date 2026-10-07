@@ -7,12 +7,14 @@
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Image, Pressable, ScrollView, View } from "react-native";
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import ProfileTop from "../components/profileTop";
 import { gridImages } from "../data/gridImages";
 import { styles } from "../data/styles";
 
 export default function Index() {
+  const router = useRouter();
+
   return (
     <ScrollView style={styles.scroll}>
       <ProfileTop />
@@ -29,15 +31,22 @@ export default function Index() {
       {/* View that contains a grid of images for the profile content */}
       <View style={[styles.imgGrid, styles.imgGridRow]}>
         {gridImages.map((image) => (
-          <Link
+          <Pressable
             key={image.id}
-            href={{ pathname: "/pages/profileImages", params: { id: image.id } }}
-            asChild
+            style={styles.imgGridItem}
+            onPress={() =>
+              router.push({
+                pathname: "/pages/profileImages",
+                params: { id: image.id },
+              })
+            }
           >
-            <Pressable style={styles.imgGridItem}>
-              <Image source={image.source} style={styles.imgGridPhoto} />
-            </Pressable>
-          </Link>
+            <Image
+              source={image.source}
+              style={styles.imgGridPhoto}
+              resizeMode="cover"
+            />
+          </Pressable>
         ))}
       </View>
     </ScrollView>

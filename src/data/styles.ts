@@ -108,6 +108,10 @@ export const styles = StyleSheet.create({
     aspectRatio: 0.75,
     padding: 1,
   },
+  imgGridPhoto: {
+    width: "100%",
+    height: "100%",
+  },
   // Add a black border to the bottom to show that it is what the user has selected
   profileNavSelected: {
     height: "100%",
