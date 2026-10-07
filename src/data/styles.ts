@@ -62,8 +62,11 @@ export const styles = StyleSheet.create({
     gap: 12,
   },
   headerText: {
-    fontSize: 25,
+    fontSize: 16,
     fontWeight: "bold",
+  },
+  headerSubText: {
+    fontSize: 12,
   },
   scroll: {
     paddingBottom: 32,

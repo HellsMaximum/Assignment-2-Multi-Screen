@@ -20,7 +20,18 @@ export default function ProfilePosts() {
   return (
     <View style={[styles.rootContainer, themeStyles.background]}>
       <View style={[styles.header, themeStyles.surface]}>
-        <StackBackArrow />
+        <View style={styles.headerSide}>
+          <StackBackArrow />
+        </View>
+        <View style={styles.headerCenter}>
+          <Text style={[themeStyles.primaryText, styles.headerText]}>
+            Posts
+          </Text>
+          <Text style={[themeStyles.secondaryText, styles.headerSubText]}>
+            dickens_doug
+          </Text>
+        </View>
+        <View style={styles.headerSide} />
       </View>
 
       <ScrollView
