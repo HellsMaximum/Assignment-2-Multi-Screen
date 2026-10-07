@@ -1,3 +1,14 @@
+/**
+ * Because each page of instagram has such different headers and layouts
+ * I decided to create seperate components for the headers of each page as needed.
+ * Because of this decision I am also able to combine more then just the header into one component.
+ * This component includes the profile header, profile stats, bio, and action buttons.
+ * or just the top of the profile page.
+ * 
+ * This could be reused on multiple profile pages if I was makeing instagram fully.
+ */
+
+
 import { Pressable, View, Text, Image, Alert } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { gridImages } from "../data/gridImages";
@@ -41,17 +52,19 @@ export default function ProfileTop() {
               <Text>Followers</Text>
             </View>
             <View style={styles.profileStat}>
-              <Text style={styles.profileStatNumber}>288</Text>
+              <Text style={styles.profileStatNumber}>291</Text>
               <Text>Following</Text>
             </View>
           </View>
         </View>
 
+        {/* Profile bio section*/}
         <View style={styles.profileBio}>
           <Text>
             The call of the void is the mind's way of appreciating life
           </Text>
         </View>
+
         {/* View containing two buttons that say "alert" when pressed a pop up shows up saying "alert button pressed" */}
         <View style={styles.profileButtonRow}>
           <Pressable

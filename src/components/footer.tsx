@@ -1,3 +1,9 @@
+/**
+ * Footer component containing navigation throughout the app
+ * This provides quick access to the main sections of the app.
+ * Reused on every page because instagram has a consistent bottom navigation bar.
+ */
+
 import { View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { styles } from "../data/styles";
