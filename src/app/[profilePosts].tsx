@@ -11,14 +11,15 @@ import ProfileImage from "@/components/profileImage";
 import StackBackArrow from "@/components/stackBackArrow";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Image, ScrollView, Text, useColorScheme, View } from "react-native";
-import { gridImages } from "../../data/gridImages";
-import { getThemeStyles, styles } from "../../data/styles";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { gridImages } from "../data/gridImages";
+import { getThemeStyles, styles } from "../data/styles";
 
 export default function ProfilePosts() {
   const themeStyles = getThemeStyles(useColorScheme() === "dark");
 
   return (
-    <View style={[styles.rootContainer, themeStyles.background]}>
+    <SafeAreaView style={[styles.rootContainer, themeStyles.background]}>
       <View style={[styles.header, themeStyles.surface]}>
         <View style={styles.headerSide}>
           <StackBackArrow />
@@ -79,6 +80,6 @@ export default function ProfilePosts() {
           </View>
         ))}
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }

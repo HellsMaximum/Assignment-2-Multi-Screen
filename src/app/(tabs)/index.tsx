@@ -2,15 +2,15 @@
  * Index page of the app/profile page
  * This page displays user profile information and content.
  * This page includes the profile header component (ProfileTop).
- * This page also includes a stack navigation for navigating selected pictures within the profile content.
+ * Selecting a picture pushes its post detail page onto the root stack.
  */
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Image, Pressable, ScrollView, useColorScheme, View } from "react-native";
 import { useRouter } from "expo-router";
-import ProfileTop from "../components/profileTop";
-import { gridImages } from "../data/gridImages";
-import { getThemeStyles, styles } from "../data/styles";
+import ProfileTop from "../../components/profileTop";
+import { gridImages } from "../../data/gridImages";
+import { getThemeStyles, styles } from "../../data/styles";
 
 export default function Index() {
   const router = useRouter();
@@ -39,7 +39,7 @@ export default function Index() {
             style={styles.imgGridItem}
             onPress={() =>
               router.push({
-                pathname: "/pages/[profilePosts]",
+                pathname: "/[profilePosts]",
                 params: { profilePosts: image.id },
               })
             }
