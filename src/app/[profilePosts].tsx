@@ -4,12 +4,13 @@
  * to navigate to this page you click on an image from the profile grid.
  *
  * This page displays the profile posts vertically.
- * Each post can be scrolled into view.
+ * Each post includes a header, an image, action icons, and a bottom section with text and date.
+ *
  */
 
-import ProfileImage from "@/components/profileImage";
-import StackBackArrow from "@/components/stackBackArrow";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import PostActions from "@/components/postActions";
+import PostStackHeader from "@/components/postStackHeader";
+import PostHeader from "@/components/postHeader";
 import { Image, ScrollView, Text, useColorScheme, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { gridImages } from "../data/gridImages";
@@ -20,53 +21,19 @@ export default function ProfilePosts() {
 
   return (
     <SafeAreaView style={[styles.rootContainer, themeStyles.background]}>
-      <View style={[styles.header, themeStyles.surface]}>
-        <View style={styles.headerSide}>
-          <StackBackArrow />
-        </View>
-        <View style={styles.headerCenter}>
-          <Text style={[themeStyles.primaryText, styles.headerText]}>
-            Posts
-          </Text>
-          <Text style={[themeStyles.secondaryText, styles.headerSubText]}>
-            dickens_doug
-          </Text>
-        </View>
-        <View style={styles.headerSide} />
-      </View>
-
-      <ScrollView style={[styles.profilePostsContainer, themeStyles.background]}>
+      {/* Header for the page */}
+      <PostStackHeader />
+      <ScrollView
+        style={[styles.profilePostsContainer, themeStyles.background]}
+      >
         {gridImages.map((image) => (
           <View key={image.id}>
-            <View style={styles.profilePostHeader}>
-              {/* Left side of the post header */}
-              <View style={styles.profilePostLeftSide}>
-                <ProfileImage style={styles.profilePostAvatar} />
-                <Text style={themeStyles.primaryText}>dickens_doug</Text>
-              </View>
-
-              {/* Right side of the post header */}
-              <Ionicons
-                name="reorder-three-outline"
-                size={30}
-                color={themeStyles.icon.color}
-              />
-            </View>
+            {/* Header for each post */}
+            <PostHeader />
             <Image source={image.source} style={styles.profilePostPhoto} />
 
-            {/* View containing 5 icons the first 4 are beside eachother on the left and the last one is by itself on the right */}
-            <View style={styles.profilePostActions}>
-              <View style={styles.profilePostActionGroup}>
-                <Ionicons name="heart-outline" size={30} color={themeStyles.icon.color} />
-                <Ionicons name="chatbubble-outline" size={30} color={themeStyles.icon.color} />
-                <Ionicons name="repeat-outline" size={30} color={themeStyles.icon.color} />
-                <Ionicons name="share-outline" size={30} color={themeStyles.icon.color} />
-              </View>
-
-              <View>
-                <Ionicons name="bookmark-outline" size={30} color={themeStyles.icon.color} />
-              </View>
-            </View>
+            {/* Post action icons */}
+            <PostActions />
 
             <View style={styles.profilePostBottom}>
               <Text style={themeStyles.primaryText}>
