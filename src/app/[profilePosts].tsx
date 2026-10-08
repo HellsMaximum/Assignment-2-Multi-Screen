@@ -5,15 +5,12 @@
  *
  * This page displays the profile posts vertically.
  * Each post includes a header, an image, action icons, and a bottom section with text and date.
- *
  */
 
-import PostActions from "@/components/postActions";
+import Post from "@/components/post";
 import PostStackHeader from "@/components/postStackHeader";
-import PostHeader from "@/components/postHeader";
-import { Image, ScrollView, Text, useColorScheme, View } from "react-native";
+import { ScrollView, useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { gridImages } from "../data/gridImages";
 import { getThemeStyles, styles } from "../data/styles";
 
 export default function ProfilePosts() {
@@ -23,29 +20,9 @@ export default function ProfilePosts() {
     <SafeAreaView style={[styles.rootContainer, themeStyles.background]}>
       {/* Header for the page */}
       <PostStackHeader />
-      <ScrollView
-        style={[styles.profilePostsContainer, themeStyles.background]}
-      >
-        {gridImages.map((image) => (
-          <View key={image.id}>
-            {/* Header for each post */}
-            <PostHeader />
-            <Image source={image.source} style={styles.profilePostPhoto} />
-
-            {/* Post action icons */}
-            <PostActions />
-
-            <View style={styles.profilePostBottom}>
-              <Text style={themeStyles.primaryText}>
-                <Text style={styles.accountNameText}>dickens_doug </Text>
-                {image.bottomText}
-              </Text>
-              <Text style={[themeStyles.secondaryText, styles.profilePostDate]}>
-                {image.dates}
-              </Text>
-            </View>
-          </View>
-        ))}
+      <ScrollView style={[styles.profilePostsContainer, themeStyles.background]}>
+        {/* Profile posts are displayed here using the Post component */}
+        <Post />
       </ScrollView>
     </SafeAreaView>
   );
