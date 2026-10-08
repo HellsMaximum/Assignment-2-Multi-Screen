@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
     gap: 12,
   },
   headerText: {
-    fontSize: 16,
+    fontSize: 24,
     fontWeight: "bold",
   },
   headerSubText: {

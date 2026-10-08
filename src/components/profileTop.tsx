@@ -4,12 +4,11 @@
  * Because of this decision I am also able to combine more then just the header into one component.
  * This component includes the profile header, profile stats, bio, and action buttons.
  * or just the top of the profile page.
- * 
+ *
  * This could be reused on multiple profile pages if I was makeing instagram fully.
- * 
+ *
  * Usage: <ProfileTop />
  */
-
 
 import { Pressable, View, Text, Alert, useColorScheme } from "react-native";
 import ProfileImage from "./profileImage";
@@ -25,7 +24,11 @@ export default function ProfileTop() {
       <View style={[styles.header, themeStyles.surface]}>
         {/* left side of the header */}
         <View style={styles.headerSide}>
-          <Ionicons name="add-outline" size={37} color={themeStyles.icon.color} />
+          <Ionicons
+            name="add-outline"
+            size={37}
+            color={themeStyles.icon.color}
+          />
         </View>
         {/* center of the header */}
         <View style={styles.headerCenter}>
@@ -35,8 +38,16 @@ export default function ProfileTop() {
         </View>
         {/* right side of the header */}
         <View style={[styles.headerSide, styles.headerRight]}>
-          <Ionicons name="notifications-outline" size={30} color={themeStyles.icon.color} />
-          <Ionicons name="menu-outline" size={30} color={themeStyles.icon.color} />
+          <Ionicons
+            name="notifications-outline"
+            size={30}
+            color={themeStyles.icon.color}
+          />
+          <Ionicons
+            name="menu-outline"
+            size={30}
+            color={themeStyles.icon.color}
+          />
         </View>
       </View>
 
