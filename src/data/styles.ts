@@ -148,9 +148,19 @@ export const styles = StyleSheet.create({
     height: "100%",
   },
   storyImage: {
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 90,
     borderRadius: 50,
+    margin: 5,
+  },
+  storyItem: {
+    width: 100,
+    alignItems: "center",
+  },
+  storyAccount: {
+    fontSize: 12,
+    textAlign: "center",
+    marginBottom: 10,
   },
   profilePostsContainer: {
     flex: 1,

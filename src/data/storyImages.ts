@@ -1,7 +1,7 @@
 export const storyImages = [
   { id: 1, source: require("../../assets/images/img4.jpg"), account: "dickens_doug" },
   { id: 2, source: require("../../assets/images/img1.jpg"), account: "golden.mia" },
-  { id: 3, source: require("../../assets/images/img2.jpg"), account: "weekend.wanderer" },
+  { id: 3, source: require("../../assets/images/img2.jpg"), account: "weekend.wander" },
   { id: 4, source: require("../../assets/images/img3.jpg"), account: "everyday.ella" },
   { id: 5, source: require("../../assets/images/img5.jpg"), account: "outdoor.olivia" },
   { id: 6, source: require("../../assets/images/img6.jpg"), account: "goodvibes.noah" },
