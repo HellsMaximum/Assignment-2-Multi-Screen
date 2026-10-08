@@ -178,6 +178,17 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 10,
   },
+  categoryChip: {
+    height: 35,
+    borderRadius: 24,
+    alignItems: "center",
+    justifyContent: "center",
+    marginHorizontal: 4,
+    paddingHorizontal: 12,
+  },
+  categoryScrollView: {
+    marginHorizontal: 8,
+  },
   profilePostsContainer: {
     flex: 1,
     backgroundColor: "white",
