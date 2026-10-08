@@ -1,4 +1,4 @@
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
 import { useColorScheme, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Footer from "../../components/footer";
@@ -10,8 +10,15 @@ export default function TabsLayout() {
   return (
     <SafeAreaView style={[styles.safeArea, themeStyles.background]}>
       <View style={[styles.rootContainer, themeStyles.background]}>
-        <Stack screenOptions={{ headerShown: false }} />
-        <Footer />
+        <Tabs
+          screenOptions={{ headerShown: false }}
+          tabBar={() => <Footer />}
+        >
+          <Tabs.Screen name="index" />
+          <Tabs.Screen name="home" />
+          <Tabs.Screen name="messages" />
+          <Tabs.Screen name="search" />
+        </Tabs>
       </View>
     </SafeAreaView>
   );
