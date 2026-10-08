@@ -147,6 +147,11 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
+  storyImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 50,
+  },
   profilePostsContainer: {
     flex: 1,
     backgroundColor: "white",

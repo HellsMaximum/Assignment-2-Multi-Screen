@@ -1,5 +1,5 @@
 /**
- * Index page of the app/profile page
+ * Index page of the app/the profile page
  * This page displays user profile information and content.
  * This page includes the profile header component (ProfileTop).
  * Selecting a picture pushes its post detail page onto the root stack.
