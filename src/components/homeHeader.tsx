@@ -1,5 +1,6 @@
 /**
  * Header for the Home screen
+ * Displays the app name with action icons on the sides
  */
 
 import { Ionicons } from "@expo/vector-icons";

@@ -162,6 +162,22 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 10,
   },
+  searchBarHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
+  searchBox: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
   profilePostsContainer: {
     flex: 1,
     backgroundColor: "white",
