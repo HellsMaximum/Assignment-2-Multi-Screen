@@ -4,6 +4,14 @@ This is Assignment 2 for CPRG-303 "Advanced Multi-Screen Mobile Application with
 
 All code for this assignment was written by Doug Dickens
 
+## AI Usage Disclamer
+
+AI was used for the following in this project:
+- To help with some of the styling such as image sizing and spacing
+- To help quickly copy and paste repeating code with slightly different variable names such as in the footer.tsx
+- To help write comment blocks at the top of the files
+- Filler text so text was better then just "message 1, message 2, etc.."
+
 ## Image Credits
 
 - Photo by Renata Meneses from Pexels: https://www.pexels.com/photo/iconic-supertree-grove-at-gardens-by-the-bay-33333685/
