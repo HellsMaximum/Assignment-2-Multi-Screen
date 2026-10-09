@@ -4,6 +4,8 @@ This is Assignment 2 for CPRG-303 "Advanced Multi-Screen Mobile Application with
 
 All code for this assignment was written by Doug Dickens
 
+Note that for a few things in this assignment I could have added more photos and it would have autofilled in for me (The search tab images). But to save time and file size I decided against adding more then 10
+
 ## AI Usage Disclamer
 
 AI was used for the following in this project:

@@ -167,7 +167,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     gap: 12,
     paddingHorizontal: 12,
-    paddingVertical: 8,
   },
   searchBox: {
     flex: 1,
@@ -187,7 +186,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   categoryScrollView: {
-    marginHorizontal: 8,
+    margin: 8,
   },
   profilePostsContainer: {
     flex: 1,
