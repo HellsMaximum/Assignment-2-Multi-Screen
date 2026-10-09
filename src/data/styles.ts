@@ -201,6 +201,9 @@ export const styles = StyleSheet.create({
     gap: 8,
   },
   messageImageItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
     paddingHorizontal: 12,
     paddingVertical: 6,
   },
