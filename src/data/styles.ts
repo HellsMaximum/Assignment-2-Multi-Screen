@@ -188,6 +188,18 @@ export const styles = StyleSheet.create({
   categoryScrollView: {
     margin: 8,
   },
+  messageNavigation: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginVertical: 16,
+    paddingHorizontal: 12,
+  },
+  messageNavigationLeft: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
   profilePostsContainer: {
     flex: 1,
     backgroundColor: "white",
