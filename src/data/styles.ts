@@ -200,6 +200,10 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     gap: 8,
   },
+  messageImageItem: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+  },
   profilePostsContainer: {
     flex: 1,
     backgroundColor: "white",
