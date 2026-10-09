@@ -1,3 +1,11 @@
+/**
+ * Stories component
+ * Displays a horizontal scrolling list of story images with account names.
+ * Each story consists of an image and the corresponding account name.
+ * 
+ * Usage: <Stories />
+ */
+
 import { Image, ScrollView, Text, useColorScheme, View } from "react-native";
 import { storyImages } from "../data/storyImages";
 import { getThemeStyles, styles } from "../data/styles";

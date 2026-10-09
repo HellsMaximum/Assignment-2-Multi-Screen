@@ -1,6 +1,7 @@
 /**
  * This component renders the profile image for the user.
  * Making it a component allows for easy and consistent use throughout the app.
+ *
  * Usage: <ProfileImage />
  */
 

@@ -1,3 +1,9 @@
+/**
+ * Search header component
+ * Displays the search bar and a horizontal scrolling list of category chips.
+ * 
+ * Usage: <SearchHeader />
+ */
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Text, useColorScheme, View, ScrollView } from "react-native";
 import { getThemeStyles, styles } from "../data/styles";
@@ -24,13 +30,17 @@ export default function SearchHeader() {
         />
       </View>
 
+      {/* category chips horizontal scroll view */}
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
         style={[styles.categoryScrollView, themeStyles.background]}
       >
         {categories.map((category) => (
-          <View key={category.id} style={[styles.categoryChip, themeStyles.button]}>
+          <View
+            key={category.id}
+            style={[styles.categoryChip, themeStyles.button]}
+          >
             <Text style={themeStyles.secondaryText}>{category.text}</Text>
           </View>
         ))}

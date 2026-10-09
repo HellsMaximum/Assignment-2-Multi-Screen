@@ -13,6 +13,7 @@ AI was used for the following in this project:
 - To help quickly copy and paste repeating code with slightly different variable names such as in the footer.tsx
 - To help write comment blocks at the top of the files
 - Filler text so text was better then just "message 1, message 2, etc.."
+- Help find and figure out what icon's to use from ionicon
 
 ## Image Credits
 

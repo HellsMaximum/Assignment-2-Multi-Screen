@@ -1,3 +1,9 @@
+/**
+ * Search screen component
+ * Displays the search header and a grid of static images.
+ * The header contains a side scrolling category list.
+ */
+
 import { getThemeStyles, styles } from "@/data/styles";
 import { ScrollView, useColorScheme, View, Image } from "react-native";
 import SearchHeader from "../../components/searchHeader";

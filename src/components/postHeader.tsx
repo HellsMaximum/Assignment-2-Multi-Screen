@@ -1,3 +1,10 @@
+/**
+ * Post header component
+ * Displays the profile image and username on the left, and a menu icon on the right.
+ *
+ * Usage: <PostHeader />
+ */
+
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Text, useColorScheme, View } from "react-native";
 import ProfileImage from "./profileImage";
